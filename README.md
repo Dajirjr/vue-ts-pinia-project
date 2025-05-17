@@ -25,7 +25,7 @@ A fast and scalable frontend boilerplate using Vue 3, TypeScript, Pinia, Vitest,
 
 Deploy your own instance:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Dajirjr/vue-ts-pinia-project)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Dajirjr/vue-ts-pinia-project) ![Azure Static Web Apps](https://img.shields.io/azure-static-web-apps/deployment-status/gray-water-02651941e.6?label=Azure%20Deploy&style=flat-square)
 
 ## Quick Start
 
