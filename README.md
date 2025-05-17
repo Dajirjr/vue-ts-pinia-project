@@ -13,11 +13,19 @@ A fast and scalable frontend boilerplate using Vue 3, TypeScript, Pinia, Vitest,
 - 📦 **Vercel** and **Azure** deployment ready
 - 🤖 **Cursor AI** prompt templates for rapid development
 
+## Demo & Deploy
+
+🌐 **Live Demo:** [https://vue-ts-pinia-project.vercel.app](https://vue-ts-pinia-project.vercel.app)
+
+Deploy your own instance:
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Dajirjr/vue-ts-pinia-project)
+
 ## Quick Start
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/vue-ts-pinia-project.git
+git clone https://github.com/Dajirjr/vue-ts-pinia-project.git
 
 # Install dependencies
 npm install
