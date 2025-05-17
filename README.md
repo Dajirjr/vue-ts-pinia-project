@@ -40,15 +40,16 @@ npm run test
 ## 📁 Project Structure
 
 ```
-├── src/             # Source code
-│   ├── components/  # Vue components
-│   ├── composables/ # Vue composables
-│   ├── stores/      # Pinia stores
-│   ├── types/       # TypeScript types
-│   └── App.vue      # Root component
-├── test/            # Test files
-├── .github/         # GitHub Actions
-└── deployment/      # Deploy guides
+src/
+  ├─ App.vue          # Root Vue component
+  ├─ main.ts          # Application entry point
+  └─ stores/
+      └─ counter.ts   # Pinia store example
+.github/
+  └─ workflows/
+      └─ ci.yml       # GitHub Actions CI config
+test/
+  └─ counter.test.ts  # Unit tests
 ```
 
 ## 📚 Documentation
