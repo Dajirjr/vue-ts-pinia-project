@@ -17,7 +17,7 @@ This project is a lightweight Vue 3 + TypeScript + Pinia frontend boilerplate wi
 > Deployed using **Azure Static Web Apps**  
 > Built with ❤️ using **Cursor**, **GitHub**, and **TypeScript**
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Dajirjr/vue-ts-pinia-project) ![Azure Static Web Apps](https://img.shields.io/azure-static-web-apps/deployment-status/gray-water-02651941e.6?label=Azure%20Deploy&style=flat-square)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Dajirjr/vue-ts-pinia-project) [![Azure Static Web Apps CI/CD](https://img.shields.io/azure-static-web-apps/deployment-status/gray-water-02651941e.6?label=Azure%20Deploy)](https://gray-water-02651941e.6.azurestaticapps.net)
 
 ---
 
@@ -36,7 +36,6 @@ npm run build
 # Run tests
 npm run test
 ```
-
 ## 📁 Project Structure
 
 ```
@@ -47,16 +46,24 @@ src/
       └─ counter.ts   # Pinia store example
 .github/
   └─ workflows/
-      └─ ci.yml       # GitHub Actions CI config
+      ├─ ci.yml           # GitHub Actions CI pipeline
+      └─ azure-static-web-apps-*.yml  # Azure deployment
 test/
   └─ counter.test.ts  # Unit tests
+config/
+  ├─ vite.config.ts   # Vite bundler configuration
+  ├─ vitest.config.ts # Vitest test configuration
+  └─ tsconfig.json    # TypeScript configuration
+deployment/
+  ├─ azure-deploy.md  # Azure deployment guide
+  └─ vercel.json      # Vercel configuration
 ```
 
 ## 📚 Documentation
 
-- [Contributing Guide](CONTRIBUTING.md)
-- [Deployment Guide](deployment/azure-deploy.md)
-- [Development Guide](deployment/vercel-deploy.md)
+- [Contributing Guidelines](CONTRIBUTING.md) - How to contribute to this project
+- [Azure Deployment Guide](deployment/azure-deploy.md) - Deploy to Azure Static Web Apps
+- [Vercel Deployment Guide](deployment/vercel-deploy.md) - Alternative deployment with Vercel
 
 ## 📝 License
 
