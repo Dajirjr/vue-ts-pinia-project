@@ -13,6 +13,12 @@ A fast and scalable frontend boilerplate using Vue 3, TypeScript, Pinia, Vitest,
 - 📦 **Vercel** and **Azure** deployment ready
 - 🤖 **Cursor AI** prompt templates for rapid development
 
+## 🚀 Live Demo
+
+👉 [Open App on Azure](https://gray-water-02651941e.6.azurestaticapps.net)
+
+> Built with Vue 3 + TypeScript + Pinia. CI/CD via Azure Static Web Apps.
+
 ## Demo & Deploy
 
 🌐 **Live Demo:** [https://vue-ts-pinia-project.vercel.app](https://vue-ts-pinia-project.vercel.app)
