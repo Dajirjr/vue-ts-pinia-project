@@ -13,7 +13,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18'
@@ -22,10 +22,10 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run TypeScript check
+      - name: Type check
         run: npx vue-tsc --noEmit
 
-      - name: Run tests
+      - name: Run unit tests
         run: npm run test
 
       - name: Build
