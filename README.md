@@ -10,14 +10,17 @@ This project is a lightweight Vue 3 + TypeScript + Pinia frontend boilerplate wi
 
 ---
 
-## 🚀 Live Demo
+## 🚀 Deployments
 
-👉 [**Open the App**](https://gray-water-02651941e.6.azurestaticapps.net)
+[![Azure Static Web Apps CI/CD](https://img.shields.io/badge/Azure%20Deploy-Live-success?logo=microsoftazure&style=flat-square)](https://gray-water-02651941e.6.azurestaticapps.net)
+[![Vercel Deployment](https://img.shields.io/badge/Vercel-Ready-black?logo=vercel&style=flat-square)](https://vercel.com/import)
 
-> Deployed using **Azure Static Web Apps**  
-> Built with ❤️ using **Cursor**, **GitHub**, and **TypeScript**
+### Live Demos
+- [🔵 Live Demo on Azure](https://gray-water-02651941e.6.azurestaticapps.net) - Primary deployment
+- [⚫ Deploy on Vercel](https://vercel.com/new/clone?repository-url=https://github.com/Dajirjr/vue-ts-pinia-project) - Alternative deployment
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Dajirjr/vue-ts-pinia-project) [![Azure Static Web Apps CI/CD](https://img.shields.io/azure-static-web-apps/deployment-status/gray-water-02651941e.6?label=Azure%20Deploy)](https://gray-water-02651941e.6.azurestaticapps.net)
+> Built with ❤️ using **Vue 3**, **TypeScript**, and **Pinia**  
+> Deployed via **Azure Static Web Apps** and **Vercel**
 
 ---
 
@@ -68,3 +71,15 @@ deployment/
 ## 📝 License
 
 MIT License - see [LICENSE](LICENSE) for details
+---
+
+## 🛣️ Planned Features & Roadmap
+
+| Feature                       | Description                          | Status     |
+|------------------------------|--------------------------------------|------------|
+| 🧪 Add `@testing-library/vue` | Test UI components                   | ⚪ Optional |
+| 🌐 Add Vue Router             | Multi-page support                   | ⚪ Optional |
+| 🔒 Add Auth                   | Supabase/Firebase login              | ⚪ Optional |
+| 📦 Use dynamic `.env`         | For API keys or endpoints            | ⚪ Optional |
+| 🧩 Deploy preview builds      | Preview branches in Azure            | ⚪ Optional |
+| 🧾 Auto-versioning            | Auto tag releases via GitHub Actions | ⚪ Optional |

@@ -19,12 +19,32 @@ export default defineConfig({
       output: {
         manualChunks: {
           'vue-vendor': ['vue', 'vue-router', 'pinia'],
-        }
+          'style-vendor': ['@/assets/styles']
+        },
+        // Optimize chunk names for better caching
+        chunkFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash][extname]'
+      }
+    },
+    // Enable minification optimizations
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true
       }
     }
   },
   server: {
     port: 3000,
-    open: true
+    open: true,
+    // Enable HMR with overlay
+    hmr: {
+      overlay: true
+    }
+  },
+  // Enable type checking in development
+  optimizeDeps: {
+    include: ['vue', 'vue-router', 'pinia']
   }
 })
