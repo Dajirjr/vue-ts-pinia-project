@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="120" height="40" rx="8" fill="#4F46E5"/>
+  <rect x="1" y="1" width="118" height="38" rx="7" fill="url(#supabase-gradient)" stroke="#3B82F6" stroke-opacity="0.1"/>
+  <path d="M31.3 25.9L28.6 28.6C28.4 28.8 28.1 29 27.7 29C27.3 29 27 28.8 26.8 28.6L20.4 22.2C20.2 22 20 21.7 20 21.3C20 20.9 20.2 20.6 20.4 20.4L23.1 17.7C23.3 17.5 23.6 17.3 24 17.3C24.4 17.3 24.7 17.5 24.9 17.7L31.3 24.1C31.5 24.3 31.7 24.6 31.7 25C31.7 25.4 31.5 25.7 31.3 25.9Z" fill="#3ECF8E"/>
+  <text x="45" y="24" font-family="Inter" font-size="14" font-weight="600" fill="white">Supabase</text>
+  <defs>
+    <linearGradient id="supabase-gradient" x1="0" y1="0" x2="120" y2="40" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+  </defs>
+</svg> 

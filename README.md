@@ -1,85 +1,92 @@
-# Vue 3 + TypeScript + Pinia Starter
+# 🚀 VisionBoard AI
 
-This project is a lightweight Vue 3 + TypeScript + Pinia frontend boilerplate with:
+Your AI-powered productivity OS. Plan smarter, focus deeper, and review progress more clearly.
 
-- ✅ Vite bundler
-- ✅ Pinia state management
-- ✅ Vitest for unit testing
-- ✅ Azure Static Web App CI/CD integration
-- ✅ GitHub Actions deployment workflow
+[![Built with VisionBoard AI](https://img.shields.io/badge/Built%20with-VisionBoard%20AI-4F46E5?style=for-the-badge)](https://visionboard.doc.dahir.dev)
 
----
+## ⚡️ Features
 
-## 🚀 Deployments
+- 🤖 **GPT-Powered Insights**
+  - Weekly progress reports
+  - Task suggestions & optimization
+  - Smart priority sorting
 
-[![Azure Static Web Apps CI/CD](https://img.shields.io/badge/Azure%20Deploy-Live-success?logo=microsoftazure&style=flat-square)](https://gray-water-02651941e.6.azurestaticapps.net)
-[![Vercel Deployment](https://img.shields.io/badge/Vercel-Ready-black?logo=vercel&style=flat-square)](https://vercel.com/import)
+- 📅 **Calendar Integration**
+  - Google Calendar sync
+  - Drag & drop scheduling
+  - Recurring tasks support
 
-### Live Demos
-- [🔵 Live Demo on Azure](https://gray-water-02651941e.6.azurestaticapps.net) - Primary deployment
-- [⚫ Deploy on Vercel](https://vercel.com/new/clone?repository-url=https://github.com/Dajirjr/vue-ts-pinia-project) - Alternative deployment
+- 🎯 **Focus Tools**
+  - Pomodoro timer
+  - Focus statistics
+  - Distraction blocking
 
-> Built with ❤️ using **Vue 3**, **TypeScript**, and **Pinia**  
-> Deployed via **Azure Static Web Apps** and **Vercel**
+- 📊 **Progress Tracking**
+  - Beautiful analytics
+  - PDF report export
+  - Task completion trends
 
----
+- 🎨 **Modern UI/UX**
+  - Dark mode support
+  - Responsive design
+  - Glassmorphism effects
 
-## 🛠 Quick Start
+## 🧠 Tech Stack
+
+- **Frontend**
+  - Vue 3 + TypeScript
+  - Tailwind CSS
+  - Pinia (State)
+  - Vite (Build)
+
+- **Backend**
+  - Supabase (Auth + DB)
+  - Edge Functions
+  - Real-time sync
+
+- **Integrations**
+  - OpenAI GPT-4
+  - Google Calendar API
+  - Chart.js
+
+## 🚀 Quick Start
 
 ```bash
+# Clone the repo
+git clone https://github.com/yourusername/visionboard-ai.git
+
 # Install dependencies
 npm install
 
-# Run locally
+# Set up environment variables
+cp .env.example .env
+
+# Start development server
 npm run dev
-
-# Build for production
-npm run build
-
-# Run tests
-npm run test
-```
-## 📁 Project Structure
-
-```
-src/
-  ├─ App.vue          # Root Vue component
-  ├─ main.ts          # Application entry point
-  └─ stores/
-      └─ counter.ts   # Pinia store example
-.github/
-  └─ workflows/
-      ├─ ci.yml           # GitHub Actions CI pipeline
-      └─ azure-static-web-apps-*.yml  # Azure deployment
-test/
-  └─ counter.test.ts  # Unit tests
-config/
-  ├─ vite.config.ts   # Vite bundler configuration
-  ├─ vitest.config.ts # Vitest test configuration
-  └─ tsconfig.json    # TypeScript configuration
-deployment/
-  ├─ azure-deploy.md  # Azure deployment guide
-  └─ vercel.json      # Vercel configuration
 ```
 
-## 📚 Documentation
+## 📸 Screenshots
 
-- [Contributing Guidelines](CONTRIBUTING.md) - How to contribute to this project
-- [Azure Deployment Guide](deployment/azure-deploy.md) - Deploy to Azure Static Web Apps
-- [Vercel Deployment Guide](deployment/vercel-deploy.md) - Alternative deployment with Vercel
+<div align="center">
+  <img src="public/screenshots/gallery/dashboard.png" alt="Dashboard" width="80%">
+</div>
 
-## 📝 License
+View more in [/public/screenshots/gallery](./public/screenshots/gallery)
 
-MIT License - see [LICENSE](LICENSE) for details
+## 🔗 Links
+
+- **🌐 Live Demo:** [visionboard.doc.dahir.dev](https://visionboard.doc.dahir.dev)
+- **📺 Demo Video:** [Watch on Loom](https://loom.com/share/...)
+- **🎯 Product Hunt:** [Launch Page](https://producthunt.com/...)
+
+## 📄 License
+
+MIT © [Your Name]
+
 ---
 
-## 🛣️ Planned Features & Roadmap
-
-| Feature                       | Description                          | Status     |
-|------------------------------|--------------------------------------|------------|
-| 🧪 Add `@testing-library/vue` | Test UI components                   | ⚪ Optional |
-| 🌐 Add Vue Router             | Multi-page support                   | ⚪ Optional |
-| 🔒 Add Auth                   | Supabase/Firebase login              | ⚪ Optional |
-| 📦 Use dynamic `.env`         | For API keys or endpoints            | ⚪ Optional |
-| 🧩 Deploy preview builds      | Preview branches in Azure            | ⚪ Optional |
-| 🧾 Auto-versioning            | Auto tag releases via GitHub Actions | ⚪ Optional |
+<div align="center">
+  <a href="https://visionboard.doc.dahir.dev">
+    <img src="public/marketing/badge-shield.svg" alt="Built with VisionBoard AI" width="200">
+  </a>
+</div>

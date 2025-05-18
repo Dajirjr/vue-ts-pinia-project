@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120" height="32" viewBox="0 0 120 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Badge Background -->
+  <rect width="120" height="32" rx="6" fill="url(#badge-gradient)"/>
+  
+  <!-- Vue.js Icon -->
+  <g transform="translate(8, 8)">
+    <path d="M12.2 2L8 8.8L3.8 2H0L8 16L16 2H12.2Z" fill="#41B883"/>
+    <path d="M12.2 2L8 8.8L3.8 2H2L8 12L14 2H12.2Z" fill="#34495E"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="32" y="20" class="badge-text" fill="#F9FAFB">Vue 3</text>
+  
+  <!-- Definitions -->
+  <defs>
+    <linearGradient id="badge-gradient" x1="0" y1="0" x2="120" y2="32" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Styles -->
+  <style>
+    .badge-text {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+    }
+  </style>
+</svg> 

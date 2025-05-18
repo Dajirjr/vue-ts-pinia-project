@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1270" height="760" viewBox="0 0 1270 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background with Gradient -->
+  <rect width="1270" height="760" fill="#F8FAFC"/>
+  <rect width="1270" height="760" fill="url(#bg-gradient)" fill-opacity="0.05"/>
+  
+  <!-- Screenshot Container with Glassmorphism -->
+  <g filter="url(#glass-blur)">
+    <rect x="40" y="40" width="1190" height="640" rx="16" fill="#0F172A" fill-opacity="0.02"/>
+    <rect x="40.5" y="40.5" width="1189" height="639" rx="15.5" stroke="#0F172A" stroke-opacity="0.1"/>
+  </g>
+
+  <!-- Logo Watermark -->
+  <g transform="translate(1150, 700) scale(0.4)" opacity="0.4">
+    <use href="#logo-dark"/>
+  </g>
+
+  <!-- Caption Area -->
+  <g filter="url(#caption-blur)">
+    <rect x="40" y="700" width="300" height="40" rx="8" fill="white" fill-opacity="0.8"/>
+    <text x="60" y="725" font-family="Inter" font-size="14" font-weight="500" fill="#0F172A" fill-opacity="0.9">VisionBoard AI - Dashboard View</text>
+  </g>
+
+  <!-- Definitions -->
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-gradient" x1="0" y1="0" x2="1270" y2="760" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+
+    <!-- Glassmorphism Effects -->
+    <filter id="glass-blur" x="30" y="30" width="1210" height="660" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feGaussianBlur in="BackgroundImageFix" stdDeviation="5"/>
+      <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur" result="shape"/>
+    </filter>
+
+    <filter id="caption-blur" x="35" y="695" width="310" height="50" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feGaussianBlur in="BackgroundImageFix" stdDeviation="2.5"/>
+      <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur" result="shape"/>
+    </filter>
+  </defs>
+</svg> 

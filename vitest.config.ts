@@ -22,20 +22,26 @@ export default defineConfig({
         '**/node_modules/**',
         'test/setup.ts'
       ],
-      // Set coverage thresholds
-      branches: 80,
-      functions: 80,
-      lines: 80,
-      statements: 80
+      thresholds: {
+        branches: 80,
+        functions: 80,
+        lines: 80,
+        statements: 80
+      }
     },
-    include: ['test/**/*.test.ts', 'test/**/*.spec.ts', 'src/**/*.test.ts'],
+    include: [
+      'test/**/*.test.ts',
+      'test/**/*.spec.ts',
+      'src/**/*.test.ts',
+      'test/**/*.test.tsx'
+    ],
     exclude: ['node_modules', 'dist'],
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
-    // Add reporters for better test output
-    reporters: ['verbose', 'html'],
-    // Increase timeout for CI environments
-    testTimeout: 10000,
+    reporters: ['default', 'html'],
+    outputFile: {
+      html: './html/test-report.html'
+    }
   },
 }) 

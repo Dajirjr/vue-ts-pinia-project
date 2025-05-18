@@ -1,0 +1,24 @@
+@import './tailwind.css';
+
+/* Custom base styles */
+:root {
+  --primary: theme('colors.purple.500');
+  --secondary: theme('colors.blue.500');
+}
+
+/* Custom utilities */
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-blue-500;
+  }
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+} 

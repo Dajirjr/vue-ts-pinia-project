@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120" height="32" viewBox="0 0 120 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Badge Background -->
+  <rect width="120" height="32" rx="6" fill="url(#badge-gradient)"/>
+  
+  <!-- Icon Placeholder -->
+  <rect x="8" y="8" width="16" height="16" rx="4" fill="#F9FAFB" fill-opacity="0.1"/>
+  
+  <!-- Text -->
+  <text x="32" y="20" class="badge-text" fill="#F9FAFB">Technology</text>
+  
+  <!-- Definitions -->
+  <defs>
+    <linearGradient id="badge-gradient" x1="0" y1="0" x2="120" y2="32" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Styles -->
+  <style>
+    .badge-text {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+    }
+  </style>
+</svg> 

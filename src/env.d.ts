@@ -1,10 +1,13 @@
 /// <reference types="vite/client" />
 
 interface ImportMetaEnv {
-  readonly VITE_APP_TITLE: string
-  readonly VITE_API_URL: string
-  readonly VITE_API_KEY: string
-  // Add more env variables here
+  readonly VITE_SUPABASE_URL: string
+  readonly VITE_SUPABASE_ANON_KEY: string
+  readonly VITE_APP_NAME?: string
+  readonly VITE_API_TIMEOUT?: string
+  readonly VITE_ENABLE_PWA?: string
+  readonly VITE_GOOGLE_CLIENT_ID: string
+  readonly VITE_GOOGLE_REDIRECT_URI: string
 }
 
 interface ImportMeta {

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Dark Background with Gradient -->
+    <rect width="1080" height="1080" fill="#0F172A"/>
+    <rect width="1080" height="1080" fill="url(#banner-gradient)" fill-opacity="0.8"/>
+    
+    <!-- Glassmorphism Card -->
+    <g filter="url(#glass-blur)">
+        <rect x="90" y="240" width="900" height="600" rx="24" fill="white" fill-opacity="0.05"/>
+        <rect x="90.5" y="240.5" width="899" height="599" rx="23.5" stroke="white" stroke-opacity="0.1"/>
+    </g>
+
+    <!-- Main Content -->
+    <g transform="translate(140, 300)">
+        <!-- Title -->
+        <text x="400" y="60" font-family="Inter" font-size="48" font-weight="700" fill="white" text-anchor="middle">Try it now</text>
+
+        <!-- QR Code -->
+        <g transform="translate(250, 120)">
+            <!-- QR Code placeholder - replace with actual QR code -->
+            <rect width="300" height="300" rx="16" fill="white"/>
+            <text x="150" y="340" font-family="Inter" font-size="24" font-weight="500" fill="white" text-anchor="middle">Scan to visit</text>
+            <text x="150" y="380" font-family="Inter" font-size="20" font-weight="500" fill="#94A3B8" text-anchor="middle">visionboard.doc.dahir.dev</text>
+        </g>
+    </g>
+
+    <!-- Slide Indicator -->
+    <g transform="translate(480, 900)">
+        <circle cx="0" cy="0" r="4" fill="#94A3B8"/>
+        <circle cx="40" cy="0" r="4" fill="#94A3B8"/>
+        <circle cx="80" cy="0" r="4" fill="#94A3B8"/>
+        <circle cx="120" cy="0" r="6" fill="#4F46E5"/>
+    </g>
+
+    <!-- Definitions -->
+    <defs>
+        <!-- Background Gradient -->
+        <linearGradient id="banner-gradient" x1="0" y1="0" x2="1080" y2="1080" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#4F46E5"/>
+            <stop offset="100%" stop-color="#3B82F6"/>
+        </linearGradient>
+
+        <!-- Glassmorphism Effect -->
+        <filter id="glass-blur" x="80" y="230" width="920" height="620" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feGaussianBlur in="BackgroundImageFix" stdDeviation="5"/>
+            <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur" result="shape"/>
+        </filter>
+    </defs>
+</svg> 

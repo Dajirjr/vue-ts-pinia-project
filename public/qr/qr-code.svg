@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- QR Code Background -->
+    <rect width="300" height="300" rx="16" fill="white"/>
+    
+    <!-- Note: The actual QR code pattern needs to be generated using a QR code library -->
+    <!-- This is a placeholder pattern -->
+    <g transform="translate(30, 30)">
+        <rect width="240" height="240" fill="#0F172A"/>
+        <text x="120" y="120" font-family="Inter" font-size="14" fill="white" text-anchor="middle">
+            Generate QR code for:
+            visionboard.doc.dahir.dev
+        </text>
+    </g>
+</svg> 

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="120" height="40" rx="8" fill="#4F46E5"/>
+  <rect x="1" y="1" width="118" height="38" rx="7" fill="url(#ts-gradient)" stroke="#3B82F6" stroke-opacity="0.1"/>
+  <path d="M20 12H36V28H20V12ZM34 14H22V26H34V14ZM29 20V18H24V20H25.5V24H27.5V20H29ZM31.5 24C32.5 24 33.5 23.5 34 23L33 21.5C32.7 21.8 32.3 22 31.8 22C31.2 22 31 21.7 31 21V20H34V19C34 17.5 33 16.5 31.5 16.5C30 16.5 29 17.5 29 19.5C29 21.5 30 24 31.5 24Z" fill="white"/>
+  <text x="45" y="24" font-family="Inter" font-size="14" font-weight="600" fill="white">TypeScript</text>
+  <defs>
+    <linearGradient id="ts-gradient" x1="0" y1="0" x2="120" y2="40" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+  </defs>
+</svg> 

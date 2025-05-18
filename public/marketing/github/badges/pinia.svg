@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120" height="32" viewBox="0 0 120 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Badge Background -->
+  <rect width="120" height="32" rx="6" fill="url(#badge-gradient)"/>
+  
+  <!-- Pinia Icon -->
+  <g transform="translate(8, 8)">
+    <path d="M8 2C4.7 2 2 4.7 2 8C2 11.3 4.7 14 8 14C11.3 14 14 11.3 14 8C14 4.7 11.3 2 8 2ZM8 12C5.8 12 4 10.2 4 8C4 5.8 5.8 4 8 4C10.2 4 12 5.8 12 8C12 10.2 10.2 12 8 12Z" fill="#FFE873"/>
+    <path d="M8 6C6.9 6 6 6.9 6 8C6 9.1 6.9 10 8 10C9.1 10 10 9.1 10 8C10 6.9 9.1 6 8 6Z" fill="#FFE873"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="32" y="20" class="badge-text" fill="#F9FAFB">Pinia</text>
+  
+  <!-- Definitions -->
+  <defs>
+    <linearGradient id="badge-gradient" x1="0" y1="0" x2="120" y2="32" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Styles -->
+  <style>
+    .badge-text {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+    }
+  </style>
+</svg> 

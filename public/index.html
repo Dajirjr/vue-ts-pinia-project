@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VisionBoard AI - Brand Assets</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+    <style>
+        :root {
+            --primary: #4F46E5;
+            --primary-dark: #3B82F6;
+            --success: #059669;
+            --bg-dark: #0F172A;
+            --bg-card: #1E293B;
+            --text: #F8FAFC;
+            --text-muted: #94A3B8;
+        }
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background: var(--bg-dark);
+            color: var(--text);
+            line-height: 1.5;
+        }
+        .header {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .header h1 {
+            background: linear-gradient(135deg, #4F46E5 0%, #3B82F6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .debug-info {
+            background: var(--bg-card);
+            padding: 16px;
+            border-radius: 8px;
+            margin-bottom: 24px;
+            font-family: monospace;
+            font-size: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .controls {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 32px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        button {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+        }
+        button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+        }
+        button:active {
+            transform: translateY(0);
+        }
+        #status {
+            margin-top: 20px;
+            padding: 16px;
+            border-radius: 8px;
+            background: var(--bg-card);
+            max-height: 300px;
+            overflow-y: auto;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .log {
+            margin: 8px 0;
+            padding: 8px;
+            border-radius: 4px;
+            background: var(--bg-dark);
+            font-family: monospace;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .success { color: #34D399; }
+        .error { color: #F87171; }
+        .success::before { content: "✓"; }
+        .error::before { content: "✕"; }
+
+        .loading {
+            display: none;
+            text-align: center;
+            margin: 20px 0;
+            color: var(--text-muted);
+        }
+        .loading.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+        .loading::after {
+            content: "";
+            width: 20px;
+            height: 20px;
+            border: 3px solid var(--text-muted);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        .success-banner {
+            display: none;
+            background: var(--success);
+            color: white;
+            padding: 16px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+            animation: slideDown 0.3s ease-out;
+            font-weight: 500;
+        }
+        @keyframes slideDown {
+            from { transform: translateY(-20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .mode-switch {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            margin-bottom: 24px;
+            justify-content: center;
+            background: var(--bg-card);
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .mode-switch label {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-muted);
+            transition: color 0.2s;
+        }
+        .mode-switch label:has(input:checked) {
+            color: var(--text);
+        }
+        .mode-switch input[type="radio"] {
+            accent-color: var(--primary);
+        }
+        .preview-section {
+            margin: 40px 0;
+            padding: 24px;
+            background: var(--bg-card);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .preview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+            margin-top: 24px;
+        }
+        .preview-item {
+            padding: 16px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .preview-item:hover {
+            transform: translateY(-4px);
+        }
+        .preview-item img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 8px;
+            border-radius: 4px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .dark-bg {
+            background: var(--bg-dark);
+        }
+        .light-bg {
+            background: var(--text);
+        }
+        h2 {
+            color: var(--text);
+            font-weight: 600;
+            margin: 0;
+        }
+        .size-label {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>VisionBoard AI - Brand Assets Generator</h1>
+        <p>Generate and preview all brand assets in various sizes and formats</p>
+    </div>
+
+    <div class="debug-info">
+        <div>🔍 Debug Information:</div>
+        <div>• Current URL: <span id="currentUrl"></span></div>
+        <div>• SVG Files Found: <span id="svgStatus">Checking...</span></div>
+        <div>• Output Directory: <span id="outputDir">public/logos/</span></div>
+    </div>
+
+    <div class="mode-switch">
+        <label>
+            <input type="radio" name="mode" value="download" checked> Download Mode
+        </label>
+        <label>
+            <input type="radio" name="mode" value="preview"> Preview Mode
+        </label>
+    </div>
+
+    <div class="controls">
+        <button onclick="checkFiles()">Check Files</button>
+        <button onclick="convertAll()">Generate All Assets</button>
+        <button onclick="togglePreview()">Toggle Preview</button>
+        <button onclick="downloadZip()" id="downloadZipBtn" style="display: none;">Download All (ZIP)</button>
+    </div>
+
+    <div id="success-banner" class="success-banner">
+        ✨ All assets have been generated successfully! ✨
+    </div>
+
+    <div id="loading" class="loading">
+        Converting assets... Please wait...
+    </div>
+
+    <div id="status"></div>
+    <div id="container" style="display: none;"></div>
+    <div id="preview" style="display: none;">
+        <!-- Preview sections will be populated by JavaScript -->
+    </div>
+
+    <script>
+        // Update debug information
+        document.getElementById('currentUrl').textContent = window.location.href;
+
+        const sizes = {
+            'dark': {
+                base: 'logos/dark/logo-dark',
+                sizes: [512, 192, 180, 144, 128, 64]
+            },
+            'light': {
+                base: 'logos/light/logo-light',
+                sizes: [512, 192, 180, 144, 128, 64]
+            },
+            'icon': {
+                base: 'logos/icon/icon-only',
+                sizes: [512, 192, 180, 144, 128, 64]
+            },
+            'qr': {
+                base: 'qr/qr-code',
+                sizes: [300]
+            }
+        };
+
+        const platformSizes = {
+            512: 'Maximum Resolution',
+            192: 'Android Play Icon',
+            180: 'Apple Touch Icon',
+            144: 'Windows Tile',
+            128: 'Standard Icon',
+            64: 'Favicon (Large)'
+        };
+
+        async function checkFiles() {
+            const svgStatus = document.getElementById('svgStatus');
+            svgStatus.textContent = 'Checking...';
+            
+            try {
+                const files = [
+                    '/logos/dark/logo-dark.svg',
+                    '/logos/light/logo-light.svg',
+                    '/logos/icon/icon-only.svg',
+                    '/qr/qr-code.svg'
+                ];
+                
+                const results = await Promise.all(files.map(async file => {
+                    try {
+                        const response = await fetch(file);
+                        return response.ok;
+                    } catch {
+                        return false;
+                    }
+                }));
+                
+                const foundCount = results.filter(Boolean).length;
+                svgStatus.textContent = `${foundCount}/4 files found`;
+                svgStatus.style.color = foundCount === 4 ? '#34D399' : '#F87171';
+                
+                logStatus(`Found ${foundCount} SVG files out of 4 required files`);
+            } catch (error) {
+                svgStatus.textContent = 'Error checking files';
+                svgStatus.style.color = '#F87171';
+            }
+        }
+
+        function logStatus(message, isError = false) {
+            const status = document.getElementById('status');
+            const log = document.createElement('div');
+            log.className = `log ${isError ? 'error' : 'success'}`;
+            log.textContent = `[${new Date().toLocaleTimeString()}] ${message}`;
+            status.appendChild(log);
+            status.scrollTop = status.scrollHeight;
+        }
+
+        async function convertSvgToPng(svgPath, outputBase, size, previewOnly = false) {
+            try {
+                const response = await fetch(svgPath);
+                if (!response.ok) throw new Error(`Failed to fetch ${svgPath}`);
+                
+                const svgText = await response.text();
+                const container = document.getElementById('container');
+                container.innerHTML = svgText;
+                
+                const svg = container.querySelector('svg');
+                svg.setAttribute('width', size);
+                svg.setAttribute('height', size);
+                
+                const canvas = document.createElement('canvas');
+                canvas.width = size;
+                canvas.height = size;
+                
+                const ctx = canvas.getContext('2d');
+                const img = new Image();
+                
+                return new Promise((resolve) => {
+                    img.onload = () => {
+                        ctx.drawImage(img, 0, 0, size, size);
+                        const pngUrl = canvas.toDataURL('image/png');
+                        
+                        if (!previewOnly) {
+                            const link = document.createElement('a');
+                            link.download = `${outputBase}-${size}.png`;
+                            link.href = pngUrl;
+                            link.click();
+                        }
+                        
+                        logStatus(`✅ Generated ${outputBase}-${size}.png (${platformSizes[size] || size + 'px'})`);
+                        resolve(pngUrl);
+                    };
+                    
+                    img.onerror = () => {
+                        logStatus(`❌ Failed to load ${svgPath}`, true);
+                        resolve(null);
+                    };
+                    
+                    img.src = 'data:image/svg+xml;base64,' + btoa(svgText);
+                });
+            } catch (error) {
+                logStatus(`❌ Error converting ${svgPath}: ${error.message}`, true);
+                return null;
+            }
+        }
+
+        async function convertAll() {
+            document.getElementById('status').innerHTML = '';
+            document.getElementById('loading').classList.add('active');
+            document.getElementById('success-banner').style.display = 'none';
+            logStatus('🚀 Starting asset generation...');
+            
+            await checkFiles();
+            
+            const mode = document.querySelector('input[name="mode"]:checked').value;
+            const generatedUrls = [];
+            
+            for (const [type, config] of Object.entries(sizes)) {
+                const svgPath = type === 'qr' ? 
+                    '/qr/qr-code.svg' : 
+                    `/logos/${type}/${type}.svg`;
+                
+                for (const size of config.sizes) {
+                    const pngUrl = await convertSvgToPng(svgPath, config.base, size, mode === 'preview');
+                    if (pngUrl && mode === 'preview') {
+                        generatedUrls.push({
+                            url: pngUrl,
+                            filename: `${config.base}-${size}.png`
+                        });
+                    }
+                }
+            }
+            
+            document.getElementById('loading').classList.remove('active');
+            document.getElementById('success-banner').style.display = 'block';
+            document.getElementById('downloadZipBtn').style.display = mode === 'preview' ? 'block' : 'none';
+            logStatus('✨ Asset generation complete!');
+            
+            if (mode === 'preview') {
+                updatePreview(generatedUrls);
+            }
+        }
+
+        function createPreviewSection(title, items, isDark = false) {
+            const section = document.createElement('div');
+            section.className = 'preview-section';
+            
+            const heading = document.createElement('h2');
+            heading.textContent = title;
+            section.appendChild(heading);
+            
+            const grid = document.createElement('div');
+            grid.className = 'preview-grid';
+            
+            items.forEach(item => {
+                const previewItem = document.createElement('div');
+                previewItem.className = `preview-item ${isDark ? 'dark-bg' : 'light-bg'}`;
+                
+                const img = document.createElement('img');
+                img.src = item.src;
+                img.alt = item.alt;
+                
+                const sizeLabel = document.createElement('div');
+                sizeLabel.className = 'size-label';
+                sizeLabel.textContent = item.label;
+                
+                previewItem.appendChild(img);
+                previewItem.appendChild(sizeLabel);
+                grid.appendChild(previewItem);
+            });
+            
+            section.appendChild(grid);
+            return section;
+        }
+
+        function togglePreview() {
+            const preview = document.getElementById('preview');
+            preview.style.display = preview.style.display === 'none' ? 'block' : 'none';
+            updatePreview();
+        }
+
+        async function updatePreview(generatedUrls) {
+            const preview = document.getElementById('preview');
+            preview.innerHTML = '';
+            
+            // Add preview sections
+            const darkLogos = createPreviewSection('Dark Logo Variants (Light Background)', [
+                { src: 'logos/dark/logo-dark-512.png', alt: 'Dark Logo 512px', label: 'Maximum Resolution (512×512)' },
+                { src: 'logos/dark/logo-dark-192.png', alt: 'Dark Logo 192px', label: 'Android Play Icon (192×192)' },
+                { src: 'logos/dark/logo-dark-180.png', alt: 'Dark Logo 180px', label: 'Apple Touch Icon (180×180)' }
+            ]);
+            
+            const lightLogos = createPreviewSection('Light Logo Variants (Dark Background)', [
+                { src: 'logos/light/logo-light-512.png', alt: 'Light Logo 512px', label: 'Maximum Resolution (512×512)' },
+                { src: 'logos/light/logo-light-192.png', alt: 'Light Logo 192px', label: 'Android Play Icon (192×192)' },
+                { src: 'logos/light/logo-light-180.png', alt: 'Light Logo 180px', label: 'Apple Touch Icon (180×180)' }
+            ], true);
+            
+            const iconOnly = createPreviewSection('Icon-Only Variants', [
+                { src: 'logos/icon/icon-only-512.png', alt: 'Icon Only 512px', label: 'Maximum Resolution (512×512)' },
+                { src: 'logos/icon/icon-only-192.png', alt: 'Icon Only 192px', label: 'Android Play Icon (192×192)' },
+                { src: 'logos/icon/icon-only-144.png', alt: 'Icon Only 144px', label: 'Windows Tile (144×144)' }
+            ]);
+            
+            const qrCode = createPreviewSection('QR Code', [
+                { src: 'qr/qr-code-300.png', alt: 'QR Code 300px', label: 'Standard Size (300×300)' }
+            ]);
+            
+            preview.appendChild(darkLogos);
+            preview.appendChild(lightLogos);
+            preview.appendChild(iconOnly);
+            preview.appendChild(qrCode);
+        }
+
+        async function downloadZip() {
+            // Note: This requires the JSZip library
+            const script = document.createElement('script');
+            script.src = 'https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js';
+            document.head.appendChild(script);
+
+            script.onload = async () => {
+                const zip = new JSZip();
+                const previews = document.querySelectorAll('.preview-item img');
+                
+                for (const img of previews) {
+                    const response = await fetch(img.src);
+                    const blob = await response.blob();
+                    const filename = img.alt.replace(' ', '-').toLowerCase() + '.png';
+                    zip.file(filename, blob);
+                }
+                
+                const content = await zip.generateAsync({type: 'blob'});
+                const link = document.createElement('a');
+                link.href = URL.createObjectURL(content);
+                link.download = 'visionboard-assets.zip';
+                link.click();
+            };
+        }
+
+        // Mode switch handler
+        document.querySelectorAll('input[name="mode"]').forEach(radio => {
+            radio.addEventListener('change', (e) => {
+                const isPreview = e.target.value === 'preview';
+                document.getElementById('downloadZipBtn').style.display = isPreview ? 'block' : 'none';
+            });
+        });
+
+        // Check files on page load
+        checkFiles();
+    </script>
+</body>
+</html> 

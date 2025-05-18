@@ -1,22 +1,18 @@
-<template>
-  <div class="app">
-    <h1>Hello from Vue 3 + TypeScript + Pinia 🚀</h1>
-  </div>
-</template>
-
-<script lang="ts" setup>
-// Component logic goes here
+<script setup lang="ts">
+import DashboardView from './views/DashboardView.vue';
 </script>
 
-<style scoped>
-.app {
-  padding: 2rem;
-  text-align: center;
-}
+<template>
+  <DashboardView />
+</template>
 
-h1 {
-  color: #42b883; /* Vue.js brand color */
-  font-weight: 700;
-  margin-bottom: 2rem;
+<style>
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  min-height: 100vh;
 }
 </style>

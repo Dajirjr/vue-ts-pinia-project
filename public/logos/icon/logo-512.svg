@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="256" cy="256" r="256" fill="url(#icon-gradient)"/>
+  
+  <!-- Logo Symbol -->
+  <g transform="translate(128, 128) scale(4)">
+    <path d="M32 16C35.3137 16 38 18.6863 38 22C38 25.3137 35.3137 28 32 28C28.6863 28 26 25.3137 26 22C26 18.6863 28.6863 16 32 16Z" stroke="#F8FAFC" stroke-width="4"/>
+    <path d="M32 8C41.9411 8 50 16.0589 50 26C50 35.9411 41.9411 44 32 44C22.0589 44 14 35.9411 14 26C14 16.0589 22.0589 8 32 8Z" stroke="#F8FAFC" stroke-width="4"/>
+  </g>
+  
+  <!-- Definitions -->
+  <defs>
+    <linearGradient id="icon-gradient" x1="0" y1="0" x2="512" y2="512" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+  </defs>
+</svg> 

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="120" height="40" rx="8" fill="#4F46E5"/>
+  <rect x="1" y="1" width="118" height="38" rx="7" fill="url(#vue-gradient)" stroke="#3B82F6" stroke-opacity="0.1"/>
+  <path d="M24 12L28 18.5L32 12H38L28 28L18 12H24Z" fill="#41B883"/>
+  <text x="45" y="24" font-family="Inter" font-size="14" font-weight="600" fill="white">Vue.js</text>
+  <defs>
+    <linearGradient id="vue-gradient" x1="0" y1="0" x2="120" y2="40" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+  </defs>
+</svg> 

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1270" height="760" viewBox="0 0 1270 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background with Gradient -->
+  <rect width="1270" height="760" fill="url(#bg-gradient)"/>
+  
+  <!-- Screenshot Container with Glassmorphism -->
+  <g filter="url(#glass-blur)">
+    <rect x="40" y="40" width="1190" height="680" rx="16" fill="url(#glass-gradient)" fill-opacity="0.1"/>
+    <rect x="40.5" y="40.5" width="1189" height="679" rx="15.5" stroke="url(#glass-border)" stroke-opacity="0.2"/>
+  </g>
+
+  <!-- Screenshot Placeholder -->
+  <foreignObject x="60" y="60" width="1150" height="640">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="width: 100%; height: 100%; overflow: hidden; border-radius: 8px;">
+      <!-- Screenshot will be placed here -->
+    </div>
+  </foreignObject>
+
+  <!-- Caption Area -->
+  <g transform="translate(60, 720)">
+    <text class="caption" fill="#9CA3AF">VisionBoard AI - Dashboard View</text>
+  </g>
+
+  <!-- Definitions -->
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-gradient" x1="0" y1="0" x2="1270" y2="760" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+
+    <!-- Glass Gradient -->
+    <linearGradient id="glass-gradient" x1="40" y1="40" x2="1230" y2="720" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#4F46E5" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#3B82F6" stop-opacity="0.05"/>
+    </linearGradient>
+
+    <!-- Glass Border -->
+    <linearGradient id="glass-border" x1="40" y1="40" x2="1230" y2="720" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#4F46E5" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#3B82F6" stop-opacity="0.2"/>
+    </linearGradient>
+
+    <!-- Glassmorphism Effect -->
+    <filter id="glass-blur" x="30" y="30" width="1210" height="700" filterUnits="userSpaceOnUse">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="8"/>
+      <feOffset dy="4"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix values="0 0 0 0 0.388235 0 0 0 0 0.4 0 0 0 0 0.945098 0 0 0 0.25 0"/>
+      <feBlend in2="BackgroundImageFix" result="effect"/>
+      <feBlend in="SourceGraphic" in2="effect" result="shape"/>
+    </filter>
+  </defs>
+
+  <!-- Styles -->
+  <style>
+    .caption {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+    }
+  </style>
+</svg> 

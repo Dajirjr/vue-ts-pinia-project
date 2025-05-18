@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1270" height="760" viewBox="0 0 1270 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dark Background with Gradient -->
+  <rect width="1270" height="760" fill="url(#dark-gradient)"/>
+  
+  <!-- Content Area with Glassmorphism -->
+  <rect x="40" y="40" width="1190" height="680" rx="16" fill="url(#glass-gradient)" fill-opacity="0.1" stroke="url(#border-gradient)" stroke-width="2"/>
+  
+  <!-- Placeholder for Screenshot -->
+  <rect x="60" y="60" width="1150" height="640" rx="8" fill="#1E293B" fill-opacity="0.5"/>
+  
+  <!-- Gradients -->
+  <defs>
+    <linearGradient id="dark-gradient" x1="0" y1="0" x2="1270" y2="760" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    
+    <linearGradient id="glass-gradient" x1="40" y1="40" x2="1230" y2="720" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#4F46E5" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#3B82F6" stop-opacity="0.05"/>
+    </linearGradient>
+    
+    <linearGradient id="border-gradient" x1="40" y1="40" x2="1230" y2="720" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#4F46E5" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#3B82F6" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
+</svg> 

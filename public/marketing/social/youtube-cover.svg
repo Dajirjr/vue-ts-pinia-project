@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Dark Background with Gradient -->
+    <rect width="1280" height="720" fill="#0F172A"/>
+    <rect width="1280" height="720" fill="url(#banner-gradient)" fill-opacity="0.8"/>
+    
+    <!-- Glassmorphism Card -->
+    <g filter="url(#glass-blur)">
+        <rect x="120" y="120" width="1040" height="480" rx="24" fill="white" fill-opacity="0.05"/>
+        <rect x="120.5" y="120.5" width="1039" height="479" rx="23.5" stroke="white" stroke-opacity="0.1"/>
+    </g>
+
+    <!-- Main Content -->
+    <g transform="translate(180, 180)">
+        <!-- Logo -->
+        <g transform="translate(0, 0) scale(0.9)">
+            <circle cx="36" cy="36" r="36" fill="url(#logo-gradient)"/>
+            <circle cx="36" cy="36" r="27" stroke="#F8FAFC" stroke-width="3"/>
+            <circle cx="36" cy="36" r="13.5" stroke="#F8FAFC" stroke-width="3"/>
+        </g>
+
+        <!-- Headlines -->
+        <text x="90" y="40" font-family="Inter" font-size="46" font-weight="700" fill="white">VisionBoard AI</text>
+        <text x="90" y="90" font-family="Inter" font-size="26" font-weight="500" fill="#94A3B8">AI-powered productivity tools for modern teams</text>
+
+        <!-- Feature List -->
+        <g transform="translate(90, 140)">
+            <text font-family="Inter" font-size="22" font-weight="500" fill="white">✨ Weekly AI insights • 📅 Calendar sync • 🎯 Focus tools • 🌙 Dark mode</text>
+        </g>
+    </g>
+
+    <!-- Subscribe CTA -->
+    <g transform="translate(180, 460)">
+        <rect x="0" y="0" width="260" height="56" rx="28" fill="#4F46E5"/>
+        <text x="130" y="37" font-family="Inter" font-size="22" font-weight="600" fill="white" text-anchor="middle">Subscribe →</text>
+    </g>
+
+    <!-- Tech Stack -->
+    <g transform="translate(500, 460)">
+        <text font-family="Inter" font-size="20" font-weight="500" fill="#94A3B8">New videos every week about productivity & AI</text>
+    </g>
+
+    <!-- Definitions -->
+    <defs>
+        <!-- Background Gradient -->
+        <linearGradient id="banner-gradient" x1="0" y1="0" x2="1280" y2="720" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#4F46E5"/>
+            <stop offset="100%" stop-color="#3B82F6"/>
+        </linearGradient>
+
+        <!-- Logo Gradient -->
+        <linearGradient id="logo-gradient" x1="0" y1="0" x2="72" y2="72" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#4F46E5"/>
+            <stop offset="100%" stop-color="#3B82F6"/>
+        </linearGradient>
+
+        <!-- Glassmorphism Effect -->
+        <filter id="glass-blur" x="110" y="110" width="1060" height="500" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feGaussianBlur in="BackgroundImageFix" stdDeviation="5"/>
+            <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur" result="shape"/>
+        </filter>
+    </defs>
+</svg> 

@@ -1,10 +1,30 @@
 import { createRouter, createWebHistory, RouteRecordRaw, NavigationGuardNext, RouteLocationNormalized } from 'vue-router'
+import { supabase } from '@/lib/supabase'
 
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
     name: 'home',
     component: () => import('@/views/HomeView.vue'),
+    meta: { requiresAuth: true }
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: () => import('@/views/LoginView.vue'),
+    meta: { requiresAuth: false }
+  },
+  {
+    path: '/calendar',
+    name: 'calendar',
+    component: () => import('@/views/CalendarView.vue'),
+    meta: { requiresAuth: true }
+  },
+  {
+    path: '/analytics',
+    name: 'analytics',
+    component: () => import('@/views/AnalyticsView.vue'),
+    meta: { requiresAuth: true }
   },
   {
     path: '/about',
@@ -33,16 +53,22 @@ const router = createRouter({
   },
 })
 
-// Global navigation guard
-router.beforeEach(
-  (
-    to: RouteLocationNormalized,
-    from: RouteLocationNormalized,
-    next: NavigationGuardNext
-  ) => {
-    // Add your navigation guards here
+// Navigation guard
+router.beforeEach(async (
+  to: RouteLocationNormalized,
+  from: RouteLocationNormalized,
+  next: NavigationGuardNext
+) => {
+  const { data: { session } } = await supabase.auth.getSession()
+  const requiresAuth = to.matched.some(record => record.meta.requiresAuth as boolean)
+
+  if (requiresAuth && !session) {
+    next('/login')
+  } else if (!requiresAuth && session) {
+    next('/')
+  } else {
     next()
   }
-)
+})
 
 export default router 

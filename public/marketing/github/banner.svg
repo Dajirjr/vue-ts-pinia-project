@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1280" height="640" viewBox="0 0 1280 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dark Background with Gradient -->
+  <rect width="1280" height="640" fill="url(#dark-gradient)"/>
+  
+  <!-- Glassmorphism Card -->
+  <g filter="url(#card-blur)">
+    <rect x="120" y="120" width="1040" height="400" rx="24" fill="url(#card)" fill-opacity="0.1"/>
+    <rect x="120.5" y="120.5" width="1039" height="399" rx="23.5" stroke="url(#card-border)" stroke-opacity="0.2"/>
+  </g>
+
+  <!-- Logo and Text -->
+  <text x="180" y="220" class="title" fill="url(#text-gradient)">VisionBoard AI</text>
+  <text x="180" y="280" class="subtitle" fill="#9CA3AF">Your AI-powered productivity dashboard</text>
+
+  <!-- Feature Highlights -->
+  <g transform="translate(180, 340)">
+    <circle cx="12" cy="12" r="12" fill="#6366F1"/>
+    <text x="40" y="16" class="feature">Vue 3 + TypeScript</text>
+  </g>
+  <g transform="translate(480, 340)">
+    <circle cx="12" cy="12" r="12" fill="#6366F1"/>
+    <text x="40" y="16" class="feature">Supabase Backend</text>
+  </g>
+  <g transform="translate(780, 340)">
+    <circle cx="12" cy="12" r="12" fill="#6366F1"/>
+    <text x="40" y="16" class="feature">GPT-4 Integration</text>
+  </g>
+
+  <!-- Tech Stack -->
+  <g transform="translate(180, 420)">
+    <text class="tech">Built with modern tools:</text>
+    <g transform="translate(200, -8)">
+      <image href="/logos/vue.svg" width="32" height="32"/>
+      <image href="/logos/supabase.svg" x="48" width="32" height="32"/>
+      <image href="/logos/openai.svg" x="96" width="32" height="32" class="invert"/>
+      <image href="/logos/tailwind.svg" x="144" width="32" height="32"/>
+    </g>
+  </g>
+
+  <!-- Definitions -->
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="dark-gradient" x1="0" y1="0" x2="1280" y2="640" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+
+    <!-- Card gradient -->
+    <linearGradient id="card" x1="120" y1="120" x2="1160" y2="520">
+      <stop offset="0%" stop-color="#1F2937"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+
+    <!-- Card border gradient -->
+    <linearGradient id="card-border" x1="120" y1="120" x2="1160" y2="520">
+      <stop offset="0%" stop-color="#374151"/>
+      <stop offset="100%" stop-color="#1F2937"/>
+    </linearGradient>
+
+    <!-- Text gradient -->
+    <linearGradient id="text-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+
+    <!-- Glassmorphism effect -->
+    <filter id="card-blur" x="110" y="110" width="1060" height="420" filterUnits="userSpaceOnUse">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="8"/>
+      <feOffset dy="4"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix values="0 0 0 0 0.388235 0 0 0 0 0.4 0 0 0 0 0.945098 0 0 0 0.25 0"/>
+      <feBlend in2="BackgroundImageFix" result="effect"/>
+      <feBlend in="SourceGraphic" in2="effect" result="shape"/>
+    </filter>
+  </defs>
+
+  <!-- Styles -->
+  <style>
+    .title {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 72px;
+      font-weight: 800;
+    }
+    .subtitle {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 36px;
+      font-weight: 400;
+    }
+    .feature {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 24px;
+      font-weight: 500;
+      fill: #F9FAFB;
+    }
+    .tech {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 20px;
+      font-weight: 500;
+      fill: #9CA3AF;
+    }
+    .invert {
+      filter: invert(1);
+    }
+  </style>
+</svg> 
